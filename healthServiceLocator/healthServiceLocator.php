@@ -95,7 +95,7 @@
 		$responses = [];
 		foreach ($id_list as $id)
 		{
-			$results = file_get_contents('https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins='.$coordinates.'&destinations=place_id:'.$id.'&mode=walking&key='.DISTANCE_MATRIX_KEY);
+			$results = file_get_contents('https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins='.$coordinates.'&destinations=place_id:'.$id.'&key='.DISTANCE_MATRIX_KEY);
 			$resultsjson = json_decode($results, true);
 			array_push($responses, $resultsjson);
 		}
